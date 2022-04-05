@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "endergrab",
+  "version": "${version}",
+  "name": "EnderGrab",
+  "description": "Allows endermen to grab entities.",
+  "authors": [
+    "tague"
+  ],
+  "contact": {
+    "email": "ethan@tague.me",
+    "sources": "https://github.com/emctague/endergrab"
+  },
+  "license": "MIT",
+  "icon": "assets/endergrab/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.tague.endergrab.EnderGrab"
+    ]
+  },
+  "mixins": [
+    "endergrab.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "fabric": "*",
+    "minecraft": "1.18.2"
+  }
+}
