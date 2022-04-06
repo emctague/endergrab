@@ -18,8 +18,8 @@ public class PickUpEntityGoal extends Goal {
 
     @Override
     public boolean canStart() {
-        return !enderman.hasPassengers() &&
-                enderman.getRandom().nextInt(PickUpEntityGoal.toGoalTicks(1200)) == 0;
+        return !enderman.hasPassengers() && enderman.getCarriedBlock() == null &&
+                enderman.getRandom().nextInt(PickUpEntityGoal.toGoalTicks(60)) == 0;
     }
 
     @Override

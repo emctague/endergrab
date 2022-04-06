@@ -12,7 +12,8 @@ public class PlaceEntityGoal extends Goal {
 
     @Override
     public boolean canStart() {
-        return enderman.hasPassengers() && enderman.getRandom().nextInt(PlaceEntityGoal.toGoalTicks(1200)) == 0;
+        return enderman.hasPassengers() &&
+                (enderman.getRandom().nextInt(PlaceEntityGoal.toGoalTicks(1200)) == 0 || enderman.getCarriedBlock() != null);
     }
 
     @Override
